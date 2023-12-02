@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "IBM_VGA";
+    src: url("../fonts/PxPlus_IBM_VGA_8x16.ttf") format("truetype");
+}
+
+body {
+    margin: 0px;
+    background: repeating-linear-gradient(black, #330033 2px);
+    font-family: "IBM_VGA", monospace;
+    color: white;
+}
+
+h1 {
+    color: black;
+    font-family: "IBM_VGA", monospace;
+    font-size: 72px;
+    text-shadow: 0em 0em 0.2em #990099;
+}
+
+main {
+    width: 70%;
+    max-width: 1080px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px double white;
+    padding: 1em;
+    display: flex;
+}
+
+li {
+    list-style: square;
+}
+
+a {
+    color: #990099;
+    text-decoration: none;
+}
+
+a.musicforum {
+    text-decoration: none;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+#albumcover {
+    width: 100%;
+    padding: 3em;
+}
+
+#center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}

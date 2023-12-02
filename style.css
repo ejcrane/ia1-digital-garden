@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "IBM_VGA";
+    src: url("fonts/PxPlus_IBM_VGA_8x16.ttf") format("truetype");
+}
+
+body {
+    margin: 0px;
+    background: repeating-linear-gradient(black, #330033 2px);
+    font-family: "IBM_VGA", monospace;
+    color: white;
+}
+
+h1 {
+    color: black;
+    font-family: "IBM_VGA", monospace;
+    font-size: 72px;
+    text-shadow: 0em 0em 0.2em #990099;
+}
+
+h2 {
+    text-shadow: 0em 0em 0.2em #990099;
+}
+
+main {
+    width: 70%;
+    max-width: 1080px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px double white;
+    padding: 1em;
+}
+
+p {
+    font-family: "IBM_VGA";
+    color: white;
+}
+
+#center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.album-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    border: 2px double white;
+    margin: auto;
+    padding: 20px;
+}
+
+.album {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.album-image {
+    position: relative;
+    width: 100%;
+}
+
+.album-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) 2px);
+    opacity: 0;
+    padding: 2em;
+    z-index: 10;
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 1.5em;
+}
+
+.album:hover .album-text {
+    opacity: 1;
+}
